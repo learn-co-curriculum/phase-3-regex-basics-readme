@@ -7,7 +7,7 @@
 - Use the range [a-z] as well as the specific character [abc] matchers
 - interpolate required letter with the ranges/patterns. /[hH]ello/
 - Use backslash special characters like \w
-- Use backsplash as escape
+- Use backslash as escape
 - Use star, dot and plus
 - Use rubular.com
 
@@ -16,12 +16,45 @@
 
 Regular expressions are an extremely powerful way to search through strings and blocks of text for specific patterns. They can be used for data validation, searching, mass file renaming, and finding records in a database. Use them carefully - they are like a surgeon's scalpel: Able to do a lot of harm or good, depending on how well it is wielded.
 
-In this lesson, we're going to learn the syntax and basic vocabulary of regular expressions. We'll start simple and build from there. A great place to head for Regex testing and practice is [Rubular](http://rubular.com/) - it allows you to build and test regular expressions against text that you define.
+In this lesson, we're going to learn the syntax and basic vocabulary of regular expressions. We'll start simple and build from there. A great place to head for Regex testing and practice is [Rubular](http://rubular.com/) - it allows you to build and test regular expressions against text that you define. In a separate window, open up Rubular. In the text box entitled "Your Test String", paste in the following monologue from Shakespeare's *The Merchant of Venice*:
 
+>If to do were as easy as to know what were good to do, chapels had been churches and poor men's cottages princes' palaces. It is a good divine that follows his own instructions: I can easier teach twenty what were good to be done, than be one of the twenty to follow mine own teaching. The brain may devise laws for the blood, but a hot temper leaps o'er a cold decree: such a hare is madness the youth, to skip o'er the meshes of good counsel the cripple. But this reasoning is not in the fashion to choose me a husband. O me, the word 'choose!' I may neither choose whom I would nor refuse whom I dislike; so is the will of a living daughter curbed by the will of a dead father. Is it not hard, Nerissa, that I cannot choose one nor refuse none?
+
+Your window should look like this:
+![rubular setup](http://curriculum-content.s3.amazonaws.com/web-development/Regex/rubular_setup.png)
 
 
 ## Writing Regular Expressions
 
-### Part 1: Do Some Stuff
+In Ruby, regular expressions are always written between forward slashes:
+`/your regex/`. In Rubular, you can see that these slashes have already been written for you.
 
-* [Stack Exchange](http://www.stackexchange.com) - [Some Question on Stack Exchange](http://www.stackexchange.com/questions/123)
+### Simple Text Matching
+
+Let's start with the simplest text matching. Add the following regex in rubular:
+```
+/twenty/
+```
+
+![twenty regex](https://curriculum-content.s3.amazonaws.com/web-development/Regex/twenty.png)
+
+Notice that the pattern matches the two instances of "twenty" in the passage. Writing a series of letters or numbers in your regular expression will result in a search for exact matches of this pattern anywhere in the string. 
+
+### Metacharacters
+The real beauty of Regular Expressions is revealed in its use of metacharacters. Metacharacters allow you to use a pre-defined shorthand to match specific characters. For example, `\d` will match any digit in your text, and `\w` will match any word character (non-digit, non-punctuation). The 'Regex Quick Reference' at the bottom of Rubular shows metacharacters and patterns that you can use. Play around with these a little. Use `\W` (notice uppercasing) to match the non-word characters in your text.
+
+### Only specific characters
+
+If I want to match all instances of vowels in a string, the regex `/aeiou/` won't work (feel free to try it), as it will only match the entire string "aeiou" - which clearly isn't in our text. Instead let's use square brackets: `/[aeiou]/` - this is looking for only **one single** character in our text which matches any of the characters inside the square brackets. If you add this regext to our rubular, you'll see every vowel highlighted in your match result.
+
+### Ranges
+
+Based on what we've just learned, we can write a regular expression looking for single characters in the first 10 letters of the alphabet like so:`/[abcdefghij]/`
+We can actually shorten this in ruby using a Regex range:`/[a-j]/`
+
+`[0123456789]` becomes `[0-9]`
+
+## Resources
+
++ [Rubular](http://rubular.com/)
++ [Regex One](http://regexone.com/)
