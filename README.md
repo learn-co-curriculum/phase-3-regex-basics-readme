@@ -1,5 +1,3 @@
-
-
 # Regex Basics
 
 ## Objectives
@@ -54,7 +52,12 @@ We can actually shorten this in ruby using a Regex range:`/[a-j]/`
 
 `[0123456789]` becomes `[0-9]`
 
+### Example: Double Vowels
+
+There are many other metacharacters and ways of building patterns in regex, many of which you can refer in the Rubular quick reference guide. However, the best way to actually learn to use Regular Expressions is to practice building your own patterns. Let's look for instances in our text of two consecutive vowels. The longest way to do this is to hand code the different combinations of two vowels:`/aa|oo|ee|ii|uu|ae|ea/`. It's pretty tedious to hand code each of these combinations (I didn't finish). An improvement is to use two sets of square brackets with vowels, each one representing a single character: `/[aeiou][aeiou]/`. Our most efficient, however, is to use repetitions: `/[aeiou]{2}/` The curly braces surrounding mean that the pattern or character directly preceding it must repeat that number of times. As such, we're looking for a repeat of a vowel two times. As you can see, there are many ways to write a Regular Expression that does the same thing. 
+
 ## Resources
 
 + [Rubular](http://rubular.com/)
 + [Regex One](http://regexone.com/)
++ [Regex Golf](https://regex.alf.nu/)
