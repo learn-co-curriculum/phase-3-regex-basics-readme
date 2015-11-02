@@ -39,7 +39,7 @@ Let's start with the simplest text matching. Add the following regex in rubular:
 Notice that the pattern matches the two instances of "twenty" in the passage. Writing a series of letters or numbers in your regular expression will result in a search for exact matches of this pattern anywhere in the string. 
 
 ### Metacharacters
-The real beauty of Regular Expressions is revealed in its use of metacharacters. Metacharacters allow you to use a pre-defined shorthand to match specific characters. For example, `\d` will match any digit in your text, and `\w` will match any word character (non-digit, non-punctuation). The 'Regex Quick Reference' at the bottom of Rubular shows metacharacters and patterns that you can use. Play around with these a little. Use `\W` (notice uppercasing) to match the non-word characters in your text.
+The real beauty of Regular Expressions is revealed in its use of metacharacters. Metacharacters allow you to use a pre-defined shorthand to match specific characters. For example, `\d` will match any digit in your text, and `\w` will match any word character (letters, numbers, and underscores). The 'Regex Quick Reference' at the bottom of Rubular shows metacharacters and patterns that you can use. Play around with these a little. Use `\W` (notice uppercasing) to match the non-word characters in your text.
 
 ### Only specific characters
 
