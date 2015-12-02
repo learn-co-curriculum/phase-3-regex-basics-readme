@@ -61,3 +61,5 @@ There are many other metacharacters and ways of building patterns in regex, many
 + [Rubular](http://rubular.com/)
 + [Regex One](http://regexone.com/)
 + [Regex Golf](https://regex.alf.nu/)
+
+<a href='https://learn.co/lessons/regex-basics-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
