@@ -62,4 +62,4 @@ There are many other metacharacters and ways of building patterns in regex, many
 + [Regex One](http://regexone.com/)
 + [Regex Golf](https://regex.alf.nu/)
 
-<a href='https://learn.co/lessons/regex-basics-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/regex-basics-readme' title='Regex Basics'>Regex Basics</a> on Learn.co and start learning to code for free.</p>
