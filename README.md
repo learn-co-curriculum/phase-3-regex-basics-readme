@@ -1,6 +1,6 @@
 # RegEx Basics
 
-## Objectives
+## Learning Goals
 
 - Use the range [a-z] as well as the specific character [abc] matchers
 - interpolate required letter with the ranges/patterns. /[hH]ello/
@@ -8,7 +8,6 @@
 - Use backslash as escape
 - Use star, dot, and plus
 - Use rubular.com
-
 
 ## Introduction
 
